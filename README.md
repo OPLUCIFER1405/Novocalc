@@ -123,8 +123,8 @@ Unlike basic calculators that evaluate raw input using `eval()`, NovaCalc implem
 
 1. **Clone or download the repository**:
    ```bash
-   git clone https://github.com/your-username/NovaCalc.git
-   cd NovaCalc
+   git clone https://github.com/OPLUCIFER1405/Novocalc.git
+   cd Novocalc
    ```
 
 2. **Create and activate a virtual environment (optional but recommended)**:
