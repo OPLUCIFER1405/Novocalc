@@ -1,0 +1,379 @@
+/* NovaCalc Modern Dark Theme QSS */
+
+QWidget {
+    background-color: #121214;
+    color: #f8fafc;
+    font-family: "Segoe UI", -apple-system, "Roboto", sans-serif;
+    font-size: 13px;
+    selection-background-color: #7c3aed;
+    selection-color: #ffffff;
+}
+
+/* Main Window */
+QMainWindow {
+    background-color: #121214;
+}
+
+/* Panels and Cards */
+QFrame#mainCard, QFrame#keypadContainer {
+    background-color: #16161a;
+    border: 1px solid #232328;
+    border-radius: 14px;
+}
+
+/* Header Area */
+QLabel#appTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: 0.5px;
+}
+
+QLabel#appSubtitle {
+    font-size: 11px;
+    font-weight: 500;
+    color: #818cf8;
+}
+
+/* Angle Mode Pill Container */
+QFrame#angleModeContainer {
+    background-color: #18181e;
+    border: 1px solid #272730;
+    border-radius: 14px;
+    padding: 2px;
+}
+
+QPushButton#btnDeg, QPushButton#btnRad {
+    border: none;
+    border-radius: 11px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    background-color: transparent;
+}
+
+QPushButton#btnDeg:hover, QPushButton#btnRad:hover {
+    color: #f1f5f9;
+    background-color: #24242e;
+}
+
+QPushButton#btnDeg[active="true"], QPushButton#btnRad[active="true"] {
+    background-color: #7c3aed;
+    color: #ffffff;
+}
+
+/* Header Action Buttons (History Toggle, etc.) */
+QPushButton#btnHeaderAction {
+    background-color: #1c1c24;
+    border: 1px solid #2a2a36;
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+QPushButton#btnHeaderAction:hover {
+    background-color: #262632;
+    border-color: #3b3b4f;
+    color: #ffffff;
+}
+
+QPushButton#btnHeaderAction:pressed {
+    background-color: #16161d;
+}
+
+QPushButton#btnHeaderAction[active="true"] {
+    background-color: #2e2646;
+    border-color: #7c3aed;
+    color: #c4b5fd;
+}
+
+/* Display Container */
+QFrame#displayCard {
+    background-color: #171520;
+    border: 1px solid #2a243a;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+QFrame#displayCard:focus-within {
+    border: 1px solid #7c3aed;
+}
+
+/* Editable Expression Input */
+QLineEdit#expressionInput {
+    background-color: transparent;
+    border: none;
+    color: #cbd5e1;
+    font-size: 20px;
+    font-family: "Segoe UI", -apple-system, sans-serif;
+    font-weight: 400;
+    padding: 2px 0px;
+    selection-background-color: #6d28d9;
+    selection-color: #ffffff;
+}
+
+QLineEdit#expressionInput:focus {
+    border: none;
+}
+
+/* Large Result Display */
+QLabel#resultLabel {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Segoe UI", -apple-system, sans-serif;
+    letter-spacing: 0.5px;
+    padding: 2px 0px;
+}
+
+/* Status / Error Feedback */
+QLabel#statusFeedback {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #64748b;
+}
+
+QLabel#statusFeedback[hasError="true"] {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+QLabel#statusFeedback[hasSuccess="true"] {
+    background-color: rgba(16, 185, 129, 0.12);
+    color: #34d399;
+}
+
+/* Calculator Buttons Base */
+QPushButton.calc-btn {
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 42px;
+    min-width: 46px;
+    padding: 4px 6px;
+    border: 1px solid transparent;
+}
+
+/* 1. Number Buttons (0-9, decimal, +/-) */
+QPushButton.btn-num {
+    background-color: #202026;
+    border: 1px solid #2c2c36;
+    color: #f8fafc;
+}
+
+QPushButton.btn-num:hover {
+    background-color: #292932;
+    border-color: #3d3d4b;
+    color: #ffffff;
+}
+
+QPushButton.btn-num:pressed {
+    background-color: #17171c;
+}
+
+/* 2. Arithmetic Operator Buttons (+, -, *, /, %) */
+QPushButton.btn-op {
+    background-color: #242430;
+    border: 1px solid #333344;
+    color: #93c5fd;
+    font-size: 16px;
+}
+
+QPushButton.btn-op:hover {
+    background-color: #2c2c3c;
+    border-color: #44445c;
+    color: #bfdbfe;
+}
+
+QPushButton.btn-op:pressed {
+    background-color: #1b1b24;
+}
+
+/* 3. Scientific Function Buttons (sin, cos, log, sqrt, etc.) */
+QPushButton.btn-sci {
+    background-color: #1a1728;
+    border: 1px solid #2a2440;
+    color: #c4b5fd;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+QPushButton.btn-sci:hover {
+    background-color: #231f36;
+    border-color: #3c325c;
+    color: #e9d5ff;
+}
+
+QPushButton.btn-sci:pressed {
+    background-color: #141220;
+}
+
+/* 4. Equals / Action Button */
+QPushButton.btn-equals {
+    background-color: #7c3aed;
+    border: 1px solid #8b5cf6;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+QPushButton.btn-equals:hover {
+    background-color: #8b5cf6;
+    border-color: #a78bfa;
+}
+
+QPushButton.btn-equals:pressed {
+    background-color: #6d28d9;
+}
+
+/* 5. Clear / Delete Action Buttons */
+QPushButton.btn-danger {
+    background-color: #26171d;
+    border: 1px solid #3d202c;
+    color: #f87171;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QPushButton.btn-danger:hover {
+    background-color: #331c26;
+    border-color: #522739;
+    color: #fca5a5;
+}
+
+QPushButton.btn-danger:pressed {
+    background-color: #1c1116;
+}
+
+/* 6. Utility Action Buttons (Parentheses, Memory, etc.) */
+QPushButton.btn-util {
+    background-color: #1e1e26;
+    border: 1px solid #2d2d3a;
+    color: #a5b4fc;
+    font-size: 13px;
+}
+
+QPushButton.btn-util:hover {
+    background-color: #272733;
+    border-color: #3a3a4d;
+    color: #c7d2fe;
+}
+
+QPushButton.btn-util:pressed {
+    background-color: #17171d;
+}
+
+/* -------------------------------------------------------------------------
+   History Panel
+   ------------------------------------------------------------------------- */
+QFrame#historyPanel {
+    background-color: #141418;
+    border-left: 1px solid #232328;
+}
+
+QLabel#historyHeaderTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+QLabel#historyCountLabel {
+    font-size: 11px;
+    color: #64748b;
+}
+
+QPushButton#btnClearHistory {
+    background-color: #20151a;
+    border: 1px solid #331d26;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #f87171;
+}
+
+QPushButton#btnClearHistory:hover {
+    background-color: #2c1a22;
+    border-color: #482333;
+    color: #fca5a5;
+}
+
+/* History List / Scroll Area */
+QScrollArea#historyScrollArea {
+    background-color: transparent;
+    border: none;
+}
+
+QWidget#historyListWidget {
+    background-color: transparent;
+}
+
+/* Individual History Item Card */
+QFrame.history-item-card {
+    background-color: #1a1a20;
+    border: 1px solid #26262e;
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+QFrame.history-item-card:hover {
+    background-color: #22222a;
+    border-color: #3f3f4c;
+}
+
+QLabel.history-item-expr {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+QLabel.history-item-res {
+    color: #a78bfa;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+QLabel#historyEmptyLabel {
+    color: #475569;
+    font-size: 13px;
+    padding: 24px;
+}
+
+/* ScrollBar Styling */
+QScrollBar:vertical {
+    border: none;
+    background: #141418;
+    width: 6px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #2e2e38;
+    min-height: 24px;
+    border-radius: 3px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #474756;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: none;
+}
+
+QToolTip {
+    background-color: #1e1e24;
+    color: #f8fafc;
+    border: 1px solid #3f3f46;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 11px;
+}

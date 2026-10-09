@@ -1,0 +1,2 @@
+"""NovaCalc automated test suite.
+"""
